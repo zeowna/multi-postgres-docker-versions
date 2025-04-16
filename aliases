@@ -1,0 +1,16 @@
+export DOCKER_POSTGRES_VERSION=17
+export DOCKER_POSTGRES_PORT=5432
+
+alias dpg_build="~/docker/postgres/build.sh"
+alias dpg_start="~/docker/postgres/start.sh"
+alias dpg_stop="~/docker/postgres/stop.sh"
+alias dpg_stop_all="~/docker/postgres/stop_all.sh"
+alias dpg_set_version=". ~/docker/postgres/set_version.sh"
+alias dpg_running="~/docker/postgres/running.sh"
+alias dpg_versions="~/docker/postgres/versions.sh"
+
+alias createdb="~/docker/postgres/createdb.sh"
+alias createuser="~/docker/postgres/createuser.sh"
+alias pg_dump="~/docker/postgres/pg_dump.sh"
+alias pg_restore="~/docker/postgres/pg_restore.sh"
+alias psql="~/docker/postgres/psql.sh"

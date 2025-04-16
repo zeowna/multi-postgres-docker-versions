@@ -7,13 +7,13 @@ fi
 
 container_id=$(docker ps -aqf "name=postgres-docker-$VERSION-$PORT")
 
-export POSTGRES_VERSION=$VERSION POSTGRES_PORT=$PORT
+export DOCKER_POSTGRES_VERSION=$VERSION DOCKER_POSTGRES_PORT=$PORT
 
 echo $container_id
 
 if [ -z $container_id  ]; then
-  pg_build $VERSION
-  pg_start
+  dpg_build $VERSION
+  dpg_start
 fi
 
 

@@ -1,7 +1,7 @@
-ARG POSTGRES_VERSION=14
+ARG DOCKER_POSTGRES_VERSION=14
 ARG IMAGE_PREFIX=
 
-FROM ${IMAGE_PREFIX}postgres:${POSTGRES_VERSION}-alpine
+FROM ${IMAGE_PREFIX}postgres:${DOCKER_POSTGRES_VERSION}-alpine
 
 # Add extra config here 
 # Copy in the load-extensions script
