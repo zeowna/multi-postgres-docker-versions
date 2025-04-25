@@ -1,3 +1,5 @@
+#!/bin/sh
+
 PORT="5432"
 
 if [ ! -z $DOCKER_POSTGRES_PORT ]; then

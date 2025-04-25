@@ -1,4 +1,6 @@
-DOCKER_POSTGRES_VERSION=$1
+#!/bin/sh
+
+VERSION=$1
 ARCH=$(arch)
 IMAGE_PREFIX=''
 
@@ -8,5 +10,5 @@ fi
 
 docker build -f ~/docker/postgres/Dockerfile \
   --build-arg IMAGE_PREFIX=$IMAGE_PREFIX \
-  --build-arg DOCKER_POSTGRES_VERSION=$DOCKER_POSTGRES_VERSION \
-  -t postgres-docker-$DOCKER_POSTGRES_VERSION .
+  --build-arg DOCKER_POSTGRES_VERSION=$VERSION \
+  -t postgres-docker-$VERSION .

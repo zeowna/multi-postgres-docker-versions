@@ -1,3 +1,5 @@
+#!/bin/sh
+
 VERSION=$1
 PORT=$2
 

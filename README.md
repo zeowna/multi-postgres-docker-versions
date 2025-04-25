@@ -83,6 +83,6 @@ The command dpg_running shows all postgres-docker-* containers:
 ```sh
 dpg_running
 ```
-# createdb, createuser, dpg_dump, dpg_restore and psql
+# createdb, createuser, pg_dump, pg_restore, psql and etc
 
 These commands will work based on the ENV variables **$DOCKER_POSTGRES_VERSION** and **$DOCKER_POSTGRES_PORT**.

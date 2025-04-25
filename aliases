@@ -11,6 +11,7 @@ alias dpg_versions="~/docker/postgres/versions.sh"
 
 alias createdb="~/docker/postgres/createdb.sh"
 alias createuser="~/docker/postgres/createuser.sh"
+alias dropdb="~/docker/postgres/dropdb.sh"
 alias pg_dump="~/docker/postgres/pg_dump.sh"
 alias pg_restore="~/docker/postgres/pg_restore.sh"
 alias psql="~/docker/postgres/psql.sh"
