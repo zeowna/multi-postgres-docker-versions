@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 container_id=$(docker ps -aqf "name=postgres-docker-*")
 
