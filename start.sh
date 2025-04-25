@@ -13,7 +13,7 @@ docker run \
   -e "DOCKER_POSTGRES_PORT=$PORT" \
   -p $PORT:$PORT \
   -d \
-  -v /Users/ze/docker/postgres/dumps:/Users/ze/docker/postgres/dumps \
+  -v ~/docker/postgres/dumps:$HOME/docker/postgres/dumps \
   -v ~/docker/postgres/data/$DOCKER_POSTGRES_VERSION:/var/lib/postgresql/data \
   --name postgres-docker-$DOCKER_POSTGRES_VERSION-$PORT \
   postgres-docker-$DOCKER_POSTGRES_VERSION -p $PORT
