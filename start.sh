@@ -10,7 +10,6 @@ docker run \
   -e "POSTGRES_USER=postgres" \
   -e "POSTGRES_PASSWORD=root" \
   -e "POSTGRES_HOST_AUTH_METHOD=trust" \
-  -e "DOCKER_POSTGRES_PORT=$PORT" \
   -p $PORT:$PORT \
   -d \
   -v ~/docker/postgres/dumps:$HOME/docker/postgres/dumps \
