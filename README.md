@@ -1,11 +1,11 @@
 # Multiple Postgres-Docker versions
 
-1. Copy an paste then aliases file content into into your **.bashrc**, you can change **$DOCKER_POSTGRES_VERSION** if needed;
+1. Copy and paste the **aliases** file content into your **.bashrc**, you can change **$DOCKER_POSTGRES_VERSION** if needed;
 2. Reload your shell context;
 
 ## dpg_build
 
-The command dpg_build will build a new docker image based on postgres oficial dockerhub image with **"$version-alpine"** tag:
+The command dpg_build will build a new docker image based on postgres official dockerhub image with **"$version-alpine"** tag:
 
 ```sh
 dpg_build $version
@@ -34,7 +34,7 @@ dpg_start
 
 ## dpg_stop
 
-The command dpg_stop stops a docker container based on the parameters  **$version** and **$port**:
+The command dpg_stop stops a docker container based on the parameters **$version** and **$port**:
 
 ```sh
 dpg_stop $version $port
@@ -56,7 +56,7 @@ dpg_stop_all
 
 ## dpg_set_version
 
-The command dpg_set_version sets the ENV variables **$DOCKER_POSTGRES_VERSION** and **$DOCKER_POSTGRES_PORT** for the current context then runs **dpg_build** and **dpg_start** based on the parameters **$version** and **$port**:
+The command dpg_set_version sets the ENV variables **$DOCKER_POSTGRES_VERSION** and **$DOCKER_POSTGRES_PORT** for the current context, then runs **dpg_build** and **dpg_start** based on the parameters **$version** and **$port**:
 
 ```sh
 dpg_set_version $version $port
