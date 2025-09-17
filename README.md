@@ -30,6 +30,8 @@ Will run the container **postgres-docker-17-5432**:
 DOCKER_POSTGRES_VERSION=17
 DOCKER_POSTGRES_PORT=5432
 dpg_start 
+# adding env variable
+dpg_start -e ENV_VARIABLE="1234" 
 ```
 
 ## dpg_stop
@@ -60,6 +62,8 @@ The command dpg_set_version sets the ENV variables **$DOCKER_POSTGRES_VERSION** 
 
 ```sh
 dpg_set_version $version $port
+# adding env variable
+dpg_set_version $version $port -e ENV_VARIABLE="1234" 
 ```
 Will build the image **postgres-docker-17** and run the container **postgres-docker-17-5432**:
 

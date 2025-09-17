@@ -14,8 +14,12 @@ export DOCKER_POSTGRES_VERSION=$VERSION DOCKER_POSTGRES_PORT=$PORT
 echo $container_id
 
 if [ -z $container_id  ]; then
+  shift
+  shift
+  params=$@
+
   dpg_build $VERSION
-  dpg_start
+  dpg_start $params
 fi
 
 

@@ -1,6 +1,8 @@
 #!/bin/bash
 
 port="5432"
+# -e PGPASSWORD=""
+env_vars=$@
 
 if [ ! -z $DOCKER_POSTGRES_PORT ]; then
   port="$DOCKER_POSTGRES_PORT"
@@ -11,10 +13,10 @@ docker run \
   -e "POSTGRES_USER=postgres" \
   -e "POSTGRES_PASSWORD=root" \
   -e "POSTGRES_HOST_AUTH_METHOD=trust" \
+  $env_vars \
   -p $port:$port \
   -d \
   -v ~/docker/postgres/dumps:$HOME/docker/postgres/dumps \
   -v ~/docker/postgres/data/postgres-$DOCKER_POSTGRES_VERSION:/var/lib/postgresql/data \
   --name postgres-docker-$DOCKER_POSTGRES_VERSION-$port \
   postgres-docker-$DOCKER_POSTGRES_VERSION -p $port
-
